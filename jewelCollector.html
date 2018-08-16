@@ -1,0 +1,85 @@
+<DOCTYPE.html>
+
+<head>
+    <title>Jewel Collector</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+
+</head>
+
+<body>
+    <h1>Jewell Collector</h1>
+
+    <div id="sizeControls" class="card">
+            <h4 class="card-header">Jewels!</h4>
+            <div class="card-body">
+              <div class="text-center">
+                <button class="btn btn-primary btn-lg normal-button" id="blueJewel">
+                  <span></span> blue Jewel</button>
+                <button class="btn btn-danger btn-lg grow-button" id="redJewel">
+                  <span></span> Red Jewel</button>
+                <button class="btn btn-danger btn-lg shrink-button" id="purpleJewel">
+                  <span></span> Purple Jewel</button>
+                <button class="btn btn-primary       btn-lg Go-Away"  id="greenJewel">
+                  <span></span> Green Jewel</button>
+              </div>
+            </div>
+          </div>
+            <h3>Current Number: <span id="curentNum">0</span></h3>
+
+</body>
+
+<script>
+
+    var jewel1 = 1;
+    var jewel2 = 5;
+    var jewel3 = 10;
+    var jewel4 = 25;
+    var curentNum = 0;
+
+ 
+ function resetjewels() {
+    var jewel1 = 1;
+    var jewel2 = 5;
+    var jewel3 = 10;
+    var jewel4 = 25;
+    var curentNum = 0;
+}
+
+ console.log(jewel1,jewel2,jewel3,jewel4);
+
+
+        var blueJewel = document.getElementById("blueJewel");
+        var redjewel = document.getElementById("redJewel");
+        var purpleJewel = document.getElementById("purpleJewel");
+        var greenJewel = document.getElementById("greenJewel");
+        var currentNum = document.getElementById("curentNum");
+        currentNum.textContent = curentNum
+        
+
+ $("#blueJewel").on("click", function() {
+    curentNum = curentNum+jewel1;
+    console.log(curentNum);
+      });
+
+$("#redJewel").on("click", function() {
+    curentNum = curentNum+jewel2;
+    console.log(curentNum);
+      });
+
+$("#purpleJewel").on("click", function() {
+    curentNum = curentNum+jewel3;
+    console.log(curentNum);
+      });
+
+$("#greenJewel").on("click", function() {
+    curentNum = curentNum+jewel4;
+    console.log(curentNum);
+      });
+    
+
+
+</script>

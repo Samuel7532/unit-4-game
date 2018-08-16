@@ -1,0 +1,68 @@
+<DOCTYPE.html>
+
+    <head>
+
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+
+    </head>
+
+
+    <body>
+
+        <h1>Flip a Coin!</h1>
+
+
+
+        <button class="btn btn-primary btn-lg normal-button" id="heads">
+                <span></span> Heads</button>
+              <button class="btn btn-danger btn-lg grow-button" id="tails">
+                <span></span> Tails</button>
+
+
+
+
+    </body>
+
+    <script>
+
+
+        var headCount = "";
+        var tailCount = "";
+        var wins = 0;
+        var loss = 0;
+        
+
+
+    
+    if (userGuess === heads){
+      wins += 1;
+      headCount += 1;
+    } else {
+      loss += 1; 
+      tailCount += 1;
+    }
+
+    if (userGuess === tails){
+      wins += 1;
+      headCount += 1;
+    } else {
+      loss += 1; 
+      tailCount += 1;
+    }
+
+
+    var userGuess = document.getElementById("heads");
+    var userGuess = document.getElementById("tails");
+    console.log(userGuess);
+    console.log(wins);
+
+    $("#heads").on("click", function() {
+    wins = wins+1;
+    console.log(wins);
+      });
+
+    </script>
