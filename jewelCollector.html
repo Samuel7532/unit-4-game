@@ -1,85 +1,165 @@
-<DOCTYPE.html>
+<DOCTYPE html!>
 
-<head>
-    <title>Jewel Collector</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <head>
+            <title>Jewel Collector</title>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <link href="https://fonts.googleapis.com/css?family=Damion" rel="stylesheet">
+
+    
+    
+    
+        </head>
+
+        <style>
+
+        body{background-color: black;}
+         
+         h4{color:gold;
+            font-family: 'Damion', 'cursive';
+            background-color: black;
+            font-size:40px;
+            text-align: center;
+            padding:20px;
+            border-bottom-style: RIDGE;
+            border-width: unset;
+            border-color: gold;
+            border-width: 10px;}
+
+        .text-center {
+            text-align: center;
+            background-color: black;
+            padding: 40px;
+            margin: -30px;
+            }
+
+        .score {background-color: black;
+            color: gold;
+            padding: 5px;
+            text-align: center;
+            font-family: 'Damion', 'cursive';
+            font-size:20px;
+            }
+
+        #greenJewel{background-color: green;
+                    border-color:green;}
+        
+        #purpleJewel{background-color: purple;
+                    border-color:purple;}
 
 
-
-</head>
-
-<body>
-    <h1>Jewell Collector</h1>
-
-    <div id="sizeControls" class="card">
-            <h4 class="card-header">Jewels!</h4>
-            <div class="card-body">
-              <div class="text-center">
-                <button class="btn btn-primary btn-lg normal-button" id="blueJewel">
-                  <span></span> blue Jewel</button>
-                <button class="btn btn-danger btn-lg grow-button" id="redJewel">
-                  <span></span> Red Jewel</button>
-                <button class="btn btn-danger btn-lg shrink-button" id="purpleJewel">
-                  <span></span> Purple Jewel</button>
-                <button class="btn btn-primary       btn-lg Go-Away"  id="greenJewel">
-                  <span></span> Green Jewel</button>
-              </div>
+        
+        </style>
+    
+        <body>
+            
+    
+            <div id="sizeControls" class="card">
+                <h4>Jewels!</h4>
+                <div class="card-body">
+                    <div class="text-center">
+                        <button class="btn btn-primary btn-lg normal-button" id="blueJewel">
+                      <span></span> blue Jewel</button>
+                        <button class="btn btn-danger btn-lg grow-button" id="redJewel">
+                      <span></span> Red Jewel</button>
+                        <button class="btn btn-danger btn-lg shrink-button" id="purpleJewel">
+                      <span></span> Purple Jewel</button>
+                        <button class="btn btn-primary       btn-lg Go-Away" id="greenJewel">
+                      <span></span> Green Jewel</button>
+                    </div>
+                </div>
             </div>
-          </div>
-            <h3>Current Number: <span id="curentNum">0</span></h3>
+            <div class= score>
+            <h3>Goal: <span id="winNum">0</span></h3>
+            <h3>Current Number: <span id="displayNum">0</span></h3>
+            <p>Wins: <span id="wins">0</span></p>
+            <p>loss: <span id="loss">0</span></p>
+            </div>
 
-</body>
+    
+        </body>
+    
+        <script>
+            var jewel1 = 1;
+            var jewel2 = 5;
+            var jewel3 = 10;
+            var jewel4 = 25;
+            var wins1 = 0;
+            var loss1 = 0;
+            var curentNum = Math.floor(Math.random() * 125) + 1;
+            console.log(curentNum);
+            var goalNum = curentNum + Math.floor(Math.random() * 125) + 1;
+            console.log(goalNum);
+    
+    
+            function resetjewels() {
+                // var jewel1 = 1;
+                // var jewel2 = 5;
+                // var jewel3 = 10;
+                // var jewel4 = 25;
+                var currentNum = Math.floor(Math.random() * 125) + 1;
+            }
+    
+    
+            var blueJewel = document.getElementById("blueJewel");
+            var redjewel = document.getElementById("redJewel");
+            var purpleJewel = document.getElementById("purpleJewel");
+            var greenJewel = document.getElementById("greenJewel");
+            // var displayNum = document.getElementById("displayNum");
+            var win = document.getElementById("win");
+            var loss = document.getElementById("loss");
+            // var goalNum = document.getElementById('winNum');
+            displayNum.textContent = curentNum;
+            wins.textContent = wins1;
+            loss.textContent = loss1;
+            winNum.textContent = goalNum;
 
-<script>
-
-    var jewel1 = 1;
-    var jewel2 = 5;
-    var jewel3 = 10;
-    var jewel4 = 25;
-    var curentNum = 0;
-
- 
- function resetjewels() {
-    var jewel1 = 1;
-    var jewel2 = 5;
-    var jewel3 = 10;
-    var jewel4 = 25;
-    var curentNum = 0;
-}
-
- console.log(jewel1,jewel2,jewel3,jewel4);
-
-
-        var blueJewel = document.getElementById("blueJewel");
-        var redjewel = document.getElementById("redJewel");
-        var purpleJewel = document.getElementById("purpleJewel");
-        var greenJewel = document.getElementById("greenJewel");
-        var currentNum = document.getElementById("curentNum");
-        currentNum.textContent = curentNum
+    
+            // var addValue = function() {
+            //     curentNum += jewel1.value;
+            //     console.log(curentNum);
+            // };
+    
+            
         
 
- $("#blueJewel").on("click", function() {
-    curentNum = curentNum+jewel1;
-    console.log(curentNum);
-      });
-
-$("#redJewel").on("click", function() {
-    curentNum = curentNum+jewel2;
-    console.log(curentNum);
-      });
-
-$("#purpleJewel").on("click", function() {
-    curentNum = curentNum+jewel3;
-    console.log(curentNum);
-      });
-
-$("#greenJewel").on("click", function() {
-    curentNum = curentNum+jewel4;
-    console.log(curentNum);
-      });
+            console.log(wins1);
+            console.log(loss1);
+            console.log(curentNum);
+            console.log(goalNum);
+            
+            
+            $("#blueJewel").on("click", function() {
+                curentNum = curentNum + jewel1;
+                displayNum.textContent = curentNum
+                console.log(curentNum);
+            });
     
+    
+            $("#redJewel").on("click", function() {
+                curentNum = curentNum + jewel2;
+                displayNum.textContent = curentNum
+                console.log(curentNum);
+            });
+    
+            $("#purpleJewel").on("click", function() {
+                curentNum = curentNum + jewel3;
+                displayNum.textContent = curentNum
+                console.log(curentNum);
+            });
+    
+            $("#greenJewel").on("click", function() {
+                curentNum = curentNum + jewel4;
+                displayNum.textContent = curentNum
+                console.log(curentNum);
+            });
 
-
-</script>
+                if (curentNum == goalNum){
+                alert("win"),wins1 +=1;
+         }
+            if (displayNum > 125){
+                alert("loss"),loss1 +=1;
+            }
+            
+        </script>
