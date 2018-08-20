@@ -65,7 +65,7 @@
                       <span></span> Red Jewel</button>
                         <button class="btn btn-danger btn-lg shrink-button" id="purpleJewel">
                       <span></span> Purple Jewel</button>
-                        <button class="btn btn-primary       btn-lg Go-Away" id="greenJewel">
+                        <button class="btn btn-primary   btn-lg Go-Away" id="greenJewel">
                       <span></span> Green Jewel</button>
                     </div>
                 </div>
@@ -99,6 +99,8 @@
                 // var jewel3 = 10;
                 // var jewel4 = 25;
                 var currentNum = Math.floor(Math.random() * 125) + 1;
+                var goalNum = curentNum + Math.floor(Math.random() * 125) + 1;
+            console.log(goalNum);
             }
     
     
@@ -106,8 +108,8 @@
             var redjewel = document.getElementById("redJewel");
             var purpleJewel = document.getElementById("purpleJewel");
             var greenJewel = document.getElementById("greenJewel");
-            // var displayNum = document.getElementById("displayNum");
-            var win = document.getElementById("win");
+            var displayNum = document.getElementById("displayNum");
+            var win = document.getElementById("wins");
             var loss = document.getElementById("loss");
             // var goalNum = document.getElementById('winNum');
             displayNum.textContent = curentNum;
@@ -115,49 +117,90 @@
             loss.textContent = loss1;
             winNum.textContent = goalNum;
 
-    
-            // var addValue = function() {
-            //     curentNum += jewel1.value;
-            //     console.log(curentNum);
-            // };
-    
-            
-        
 
-            console.log(wins1);
-            console.log(loss1);
-            console.log(curentNum);
-            console.log(goalNum);
-            
-            
             $("#blueJewel").on("click", function() {
                 curentNum = curentNum + jewel1;
-                displayNum.textContent = curentNum
+                displayNum.textContent = curentNum;
+
+            if (curentNum === goalNum){
+                alert("win");
+                wins1 ++;
+            }
+            if (curentNum > goalNum){
+                alert("loss");
+                loss1 ++;
+            }   
                 console.log(curentNum);
+                console.log(goalNum);
+                console.log(wins1);
+                console.log(loss1);
+            
             });
-    
+            
     
             $("#redJewel").on("click", function() {
                 curentNum = curentNum + jewel2;
                 displayNum.textContent = curentNum
                 console.log(curentNum);
+
+            if (curentNum === goalNum){
+                alert("win");
+                wins1 ++;
+            }
+            if (curentNum > goalNum){
+                alert("loss");
+                loss1 ++;
+            }   
+                console.log(curentNum);
+                console.log(goalNum);
+                console.log(wins1);
+                console.log(loss1);
+
             });
     
             $("#purpleJewel").on("click", function() {
                 curentNum = curentNum + jewel3;
                 displayNum.textContent = curentNum
                 console.log(curentNum);
+
+            if (curentNum === goalNum){
+                alert("win");
+                wins1 ++;
+            }
+            if (curentNum > goalNum){
+                alert("loss");
+                loss1 ++;
+            }   
+                console.log(curentNum);
+                console.log(goalNum);
+                console.log(wins1);
+                console.log(loss1);
             });
     
             $("#greenJewel").on("click", function() {
                 curentNum = curentNum + jewel4;
                 displayNum.textContent = curentNum
                 console.log(curentNum);
+
+            if (curentNum === goalNum){
+                alert("win");
+                wins1 ++;
+            }
+            if (curentNum > goalNum){
+                alert("loss");
+                loss1 ++;
+            }   
+                console.log(curentNum);
+                console.log(goalNum);
+                console.log(wins1);
+                console.log(loss1);
             });
 
-                if (curentNum == goalNum){
+            
+            
+            if (curentNum == goalNum){
                 alert("win"),wins1 +=1;
-         }
+            }
             if (displayNum > 125){
                 alert("loss"),loss1 +=1;
             }
