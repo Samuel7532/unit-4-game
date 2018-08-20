@@ -1,0 +1,33 @@
+body{background-color: black;}
+         
+         h4{color:gold;
+            font-family: 'Damion', 'cursive';
+            background-color: black;
+            font-size:40px;
+            text-align: center;
+            padding:20px;
+            border-bottom-style: RIDGE;
+            border-width: unset;
+            border-color: gold;
+            border-width: 10px;}
+
+        .text-center {
+            text-align: center;
+            background-color: black;
+            padding: 40px;
+            margin: -30px;
+            }
+
+        .score {background-color: black;
+            color: gold;
+            padding: 5px;
+            text-align: center;
+            font-family: 'Damion', 'cursive';
+            font-size:20px;
+            }
+
+        #greenJewel{background-color: green;
+                    border-color:green;}
+        
+        #purpleJewel{background-color: purple;
+                    border-color:purple;}
